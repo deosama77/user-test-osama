@@ -31,7 +31,7 @@ app.use((error, req, res, next) => {
 
 });
 
-const port=process.env.port||4000
+const port=process.env.PORT||4000
 const server=app.listen(port,function () {
     console.log("Server is running on port : "+port)
     console.log("Database",process.env.DATABASE_URL)
