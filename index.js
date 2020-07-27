@@ -30,8 +30,10 @@ app.use((error, req, res, next) => {
     res.json({ message: error.message || 'An unknown error occurred!' });
 
 });
+
 const port=process.env.port
 const server=app.listen(port,function () {
     console.log("Server is running on port : "+port)
+    console.log("Database",process.env.DATABASE_URL)
 })
 module.exports=server
